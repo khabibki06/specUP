@@ -16,3 +16,10 @@ spc <- function(spectraUP, no.spectra = "all"){
   }
   spectraUP@spectra[no.spectra]
 }
+
+##function change wavenumber and intensity label
+change_label <- function(spectraUP, new_wave_label = NULL, new_intensity_label = NULL){
+  if (is.null(new_wave_label) == FALSE) {spectraUP@wavenumbers.label <- new_wave_label}
+  if (is.null(new_intensity_label) == FALSE) {spectraUP@intensity.label <- new_intensity_label}
+}
+
